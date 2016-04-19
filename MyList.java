@@ -1,10 +1,6 @@
  public class MyList 
 {  
   // Properties
-  boolean nemesisCaptured;
-  double timeSinceFed;
-  double timeBetweenFeedings;
-  private int sharks;
   public Node head;
   public Node tail;
   public Node current;
@@ -148,84 +144,5 @@
     }
   }
   
-  // stack methods
-  
-  public void push(Node newNode) {
-    System.out.println("push");
-    this.addToFront(newNode);
-  }
-  
-  public Node pop(){
-    return remove(0);
-  }
-  
-  public void popAll() {
-    while (!isEmpty()) {
-      this.pop().print();
-    }
-  }
-  
-  // queue methods
-  
-  public void enqueue(Node newNode){
-    newNode.setPrev(this.tail);
-    this.tail.setNext(newNode);
-    //newNode.debug();
-    this.tail = newNode; 
-    //this.head.debug();
-  }
-  
-  public Node dequeue(){
-    return remove(0);
-  }
-  
-  public void dequeueAll() {
-    //System.out.println("dequeueAll");
-    while (!isEmpty()) {
-      //System.out.println("isn't empty");
-      this.dequeue().print();
-    }
-  }
-  
-  public void capture(Node capturedHero, double elapsedTime) {
-    if (capturedHero.nemesis == 1) {
-      this.nemesisCaptured = true;
-      this.enqueue(capturedHero);
-    }
-    else
-    {
-      if (this.nemesisCaptured)
-        this.push(capturedHero);
-      else
-        this.enqueue(capturedHero);
-    }
-    System.out.println(elapsedTime + ": " +
-                                   capturedHero.heroName + 
-                                   " has been captured.");
-  }
-  
-  public void feedSharks(double elapsedTime) {
-    System.out.println("feedSharks");
-    Node fedHero;
-// feeds next hero to sharks
-    if (this.nemesisCaptured)
-      fedHero = this.pop();
-    else
-      fedHero = this.dequeue();
-    if (fedHero.nemesis == 1) {
-      this.nemesisCaptured = false;
-    }
-    System.out.println(elapsedTime + ": " +
-                                   fedHero.heroName + 
-                                   " has been fed to the sharks.");
-  }
-  
-  public void trackFeedingTime(double elapsedTime){
-    System.out.println("trackFeedingTime: timeSinceFed " + this.timeSinceFed + " timeBetweenFeedings " + this.timeBetweenFeedings);
-    if (this.timeSinceFed > this.timeBetweenFeedings) {
-      feedSharks(elapsedTime);
-      this.timeSinceFed = this.timeSinceFed - this.timeBetweenFeedings;
-    }
-    this.timeSinceFed += elapsedTime - lastfeedingtime
-  }
+
 } // class myList

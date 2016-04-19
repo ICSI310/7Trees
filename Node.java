@@ -2,14 +2,7 @@
 public class Node 
 {  
   // Properties
-  //public String data;
-  // Option 1: make a hero class
-  //private Hero hero;
-  // Option 2: put the data from the hero class in the node
-  // don't make things public in your homework; this is just to conserve class time
-  public String heroName;
-  public int nemesis;
-  public double time;
+  public float data;
   public Node next;
   public Node prev;
     
