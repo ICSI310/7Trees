@@ -10,19 +10,17 @@ public class Node
   // Constructors
   public Node() {
     //System.out.println("Node: Default Constructor");
-    this.heroName = "";
-    this.nemesis = 0;
-    this.time = 0;
-    this.next = null;
-    this.prev = null;
+    this.data = 0;
+    this.root = null;
+    this.left = null;
+    this.right = null;
   }
   
-  public Node(String newName, int newNemesis, double newTime) {
-    this.heroName = newName;
-    this.nemesis = newNemesis;
-    this.time = newTime;
-    this.next = null;
-    this.prev = null;
+  public Node(float newData) {
+    this.data = newData;
+    this.root = null;
+    this.left = null;
+    this.right = null;
   }
   
   public Node( String newName, int newNemesis, double newTime, Node newNext, Node newPrev) {
