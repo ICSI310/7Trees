@@ -1,4 +1,4 @@
- public class MyList 
+ public class Tree 
 {  
   // Properties
   public Node head;
