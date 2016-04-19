@@ -3,8 +3,9 @@ public class Node
 {  
   // Properties
   public float data;
-  public Node next;
-  public Node prev;
+  public Node root;
+  public Node left;
+  public Node right;
     
   // Constructors
   public Node() {
