@@ -2,8 +2,6 @@
 {  
   // Properties
   public Node root;
-  public Node left;
-  public Node right;
   
   // Constructors
   
@@ -14,15 +12,26 @@
   
   
   
-  public void insert(int index, Node newNode) {
-    System.out.println("insert: " + index);
-    if (index == 0) {
-      System.out.println("if index == 0");
-      this.addToFront(newNode);
+  public void insert(Node newNode) {
+    Node current = null;
+    if (this.root == null) {
+      this.root = newNode;
     }
+    else {
+      // traverse to new node (binary search tree)
+      current = this.root;
+      // compare newNode to current and decide which branch to move to
+      if(newNode.data < current.data) 
+        // move left
+      else if (newNode.data > current.data) 
+      // move right
+      else
+        // increment counter
+        
+    /*
     else{
       System.out.println("else");
-      // traverse to new node
+      
       this.current = this.get(index); 
       if (this.current == null) { // end of the list
         newNode.setPrev(this.tail);
@@ -40,13 +49,7 @@
         // newNode's next's previous to newNode
         newNode.getNext().setPrev(newNode);
       }
-      /*System.out.println("got index: " + this.current);
-      // set newnode's next
-      newNode.setNext(current.getNext()); // shouldn't be self
-      this.current.setNext(newNode);
-      System.out.println("set newNode");*/
-      // set node before newnode's next to newnode
-    } 
+    } */
   }
   
   /*public Node remove(int index){

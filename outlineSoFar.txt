@@ -2,11 +2,12 @@ Outline:
 Main
 	(Empty/commented out stuff)
 Tree
-	properties: Node root, left, right
+	properties: Node root 
 	constructor: (default)
 	methods:
  		boolean isEmpty()
-		void insert(int index, Node newNode)
+		void insert(int index, Node newNode) 
+			- why index as arg?
 		void print()
 Node
 	properties: float data, Node root, left, right
