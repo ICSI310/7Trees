@@ -6,7 +6,7 @@ public class Main
 {
   // the main method
   public static void main(String[] args) throws IOException{
-    MyList list = new MyList();
+    //MyList list = new MyList();
     //Double elapsedTime = new Double(0);// assume 0 = first hero captured
     double elapsedTime = 0;
     Scanner input = null;
@@ -31,10 +31,5 @@ public class Main
     
     
   }
-  
-  
-  }
-  
 
-    
 } // class Main

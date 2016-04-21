@@ -23,15 +23,6 @@ public class Node
     this.right = null;
   }
   
-  public Node( String newName, int newNemesis, double newTime, Node newNext, Node newPrev) {
-    //System.out.println("Node: Constructor");
-    this.heroName = newName;
-    this.nemesis = newNemesis;
-    this.time = newTime;
-    this.next = newNext;
-    this.prev = newPrev;
-  }
-  
   // Getters/Setters
   public Node getNext() {
     //System.out.println("Node: getNext");

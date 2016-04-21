@@ -6,7 +6,7 @@
   public Node current;
   
   // Constructors
-  public MyList() {
+  public Tree() {
     //System.out.println("MyList: Default constructor");
     this.nemesisCaptured = false;
     this.timeSinceFed = 0;
@@ -15,12 +15,6 @@
     this.head = new Node();
     this.tail = head;
     this.current = head;
-  }
-  
-  public void setSharks(int newSharks) {
-    this.sharks = newSharks;
-    this.timeBetweenFeedings = 8/this.sharks;
-    System.out.println("sharks = " + sharks);
   }
   
   public boolean isEmpty() {
