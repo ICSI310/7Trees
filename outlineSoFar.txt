@@ -1,23 +1,41 @@
 Outline:
 Main
-	Scanner (unused)
+	(Empty/commented out stuff)
 Tree
-	properties: Node head, tail, current
-	constructor: left over from shark thing
+	properties: Node root, left, right
+	constructor: (default)
 	methods:
-		boolean isEmpty()
-		void addToFront(Node)
+ 		boolean isEmpty()
 		void insert(int index, Node newNode)
-		Node remove(int index)
-		Node get(int index)
 		void print()
 Node
 	properties: float data, Node root, left, right
 	constructor: Node() Node(float)
 	methods:
-		Node getNext()
-		Node getPrev()
-		void setNext(Node newNext)
-		void setPrev(Node newPrev)
+		Node getLeft()
+		Node getRight() 
+		void void setLeft(Node newLeft)
+		void setRight(Node newRight)
 		void debug()
 		void print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

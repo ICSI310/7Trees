@@ -24,43 +24,30 @@ public class Node
   }
   
   // Getters/Setters
-  public Node getNext() {
-    //System.out.println("Node: getNext");
-    return this.next;
+  public Node getRight() {
+    return this.right;
   }
   
-  public Node getPrev() {
-    //System.out.println("Node: getNext");
-    return this.prev;
+  public Node getLeft() {
+    return this.left;
   }
   
-  public void setNext(Node newNext) {
+  public void setLeft(Node newLeft) {
     //System.out.println("Node setNext");
-    this.next = newNext;
+    this.left = newLeft;
   }
   
-  public void setPrev(Node newPrev) {
+  public void setRight(Node newRight) {
     //System.out.println("Node setNext");
-    this.prev = newPrev;
+    this.right = newRight;
   }
-  
-  /*public String getData() {
-    //System.out.println("Node: getData");
-    return this.data;
-  }*/
-  
-  /*public void setData(String newData) {
-    //System.out.println("Node: setData");
-    this.data = newData;
-  }*/
-  
-  // Methods
+
   public void debug() {
-    System.out.println( "Node " + this + " Data " + this.heroName + " " + this.nemesis + " " + this.time + " Next " + this.next + " Prev " + this.prev);
+    System.out.println( "Node " + this + " " + this.left + " " + this.right);
   }
   
   public void print() {
-    System.out.println(this.heroName + " " + this.nemesis + " " + this.time);
+    System.out.println("Data: " + this.data);
   }
   
   

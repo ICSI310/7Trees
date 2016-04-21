@@ -1,38 +1,18 @@
  public class Tree 
 {  
   // Properties
-  public Node head;
-  public Node tail;
-  public Node current;
+  public Node root;
+  public Node left;
+  public Node right;
   
   // Constructors
-  public Tree() {
-    //System.out.println("MyList: Default constructor");
-    this.nemesisCaptured = false;
-    this.timeSinceFed = 0;
-    this.timeBetweenFeedings = 8;
-    this.sharks = 0;
-    this.head = new Node();
-    this.tail = head;
-    this.current = head;
-  }
   
+  // Methods
   public boolean isEmpty() {
     return (this.head == null);
   }
   
-  // Methods
-  public void addToFront(Node newNode) {
-    //System.out.println("MyList: addToFront");
-    //this.head.debug();
-    //newNode.debug();
-     // just add to head of list for now
-    newNode.setNext(this.head);
-    this.head.setPrev(newNode);
-    //newNode.debug();
-    this.head = newNode; 
-    //this.head.debug();
-  }
+  
   
   public void insert(int index, Node newNode) {
     System.out.println("insert: " + index);
@@ -69,7 +49,7 @@
     } 
   }
   
-  public Node remove(int index){
+  /*public Node remove(int index){
     // make sure index is legal
     if (index < 0) {
       System.out.println("Index is less than 0.");
@@ -96,9 +76,9 @@
       removedNode.getNext().setPrev(removedNode.getPrev());
     // return removed node
     return removedNode;
-  }
+  }*/
   
-  public Node get(int index) {
+/*  public Node get(int index) {
     //System.out.println("get: " + index);
     this.current = this.head;
     //System.out.println("current: " + this.current);
@@ -112,30 +92,11 @@
     }
     //System.out.println("Traversal finished");
     return(this.current);
-  }
+  }*/
   
   // traverses and prints
   public void print() {
-    //System.out.println("MyList: print");
-    System.out.print("forwards: ");
-    this.current = this.head;
-    //this.current.debug();
-    while(null != this.current){
-      //this.current.debug();
-      //this.current.print();
-      System.out.print(this.current.heroName + " ");
-      this.current = this.current.getNext();
-    }
-    System.out.print("\n");
-    System.out.print("backwards: ");
-    this.current = this.tail;
-    //this.current.debug();
-    while(null != this.current){
-      //this.current.debug();
-      //this.current.print();
-      System.out.print(this.current.heroName + " ");
-      this.current = this.current.getPrev();
-    }
+    System.out.print("printTree: " + this.root);
   }
   
 
