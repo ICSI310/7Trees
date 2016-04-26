@@ -4,52 +4,41 @@
   public Node root;
   
   // Constructors
-  
+  public Tree() {
+    this.root = null;
+  }
   // Methods
   public boolean isEmpty() {
-    return (this.head == null);
+    return (this.root == null);
+  }
+
+  public void insert(Node newNode){
+    insert(newNode, this.root);
   }
   
-  
-  
-  public void insert(Node newNode) {
-    Node current = null;
-    if (this.root == null) {
+  public void insert(Node newNode, Node current) {
+    if (current == null) // for empty tree
       this.root = newNode;
-    }
-    else {
-      // traverse to new node (binary search tree)
-      current = this.root;
-      // compare newNode to current and decide which branch to move to
-      if(newNode.data < current.data) 
-        // move left
-      else if (newNode.data > current.data) 
-      // move right
-      else
-        // increment counter
-        
-    /*
     else{
-      System.out.println("else");
-      
-      this.current = this.get(index); 
-      if (this.current == null) { // end of the list
-        newNode.setPrev(this.tail);
-        this.tail.setNext(newNode);
-        this.tail = newNode;
-         
-      }
-      else {
-        // set newNode's previous to current's prev
-        newNode.setPrev(this.current.getPrev());
-        // set newNode's next to current
-        newNode.setNext(this.current);
-        // newNode's prevous's next to newNode
-        newNode.getPrev().setNext(newNode);
-        // newNode's next's previous to newNode
-        newNode.getNext().setPrev(newNode);
-      }
-    } */
+    if (newNode.data < current.data) {// left
+      if (current.left == null) {
+        // add node base case
+        current.left = newNode;
+        newNode.parent = current;
+      }// recursive call to left subtree
+      else insert(newNode, current.left);
+    }
+    else if (newNode.data > current.data){// right
+      if (current.right == null) {
+        // add node base case
+        current.right = newNode;
+        newNode.parent = current;
+      }// recursive call to left subtree
+      else insert(newNode, current.right);
+    else 
+      // increment base case
+      current.counter++;
+    }
   }
   
   /*public Node remove(int index){

@@ -4,7 +4,7 @@ public class Node
   // Properties
   public int counter;
   public float data;
-  public Node root;
+  public Node parent;
   public Node left;
   public Node right;
     
@@ -13,7 +13,7 @@ public class Node
     //System.out.println("Node: Default Constructor");
     this.data = 0;
     this.counter = 0;
-    this.root = null;
+    this.parent = null;
     this.left = null;
     this.right = null;
   }
@@ -21,7 +21,7 @@ public class Node
   public Node(float newData) {
     this.data = newData;
     this.counter = 0;
-    this.root = null;
+    this.parent = null;
     this.left = null;
     this.right = null;
   }

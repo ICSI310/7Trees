@@ -5,7 +5,6 @@ Tree
 	properties: Node root 
 	constructor: (default)
 	methods:
- 		boolean isEmpty()
 		void insert(int index, Node newNode) 
 			- why index as arg?
 		void print()
