@@ -6,7 +6,24 @@ public class Main
 {
   // the main method
   public static void main(String[] args) throws IOException{
-    //MyList list = new MyList();
+    Tree tree = new Tree();
+    tree.insert(7);
+    tree.insert(18);
+    tree.insert(2);
+    tree.insert(2);
+    tree.insert(5);
+    tree.insert(20);
+    tree.insert(12);
+    tree.insert(11);
+    tree.insert(7);
+    
+    
+    
+    
+    
+    
+    
+    
     //Double elapsedTime = new Double(0);// assume 0 = first hero captured
     //Scanner input = null;
 

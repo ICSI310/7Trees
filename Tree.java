@@ -12,29 +12,30 @@
     return (this.root == null);
   }
 
-  public void insert(Node newNode){
-    insert(newNode, this.root);
+  public void insert(float newFloat){
+    insert(new Node(newFloat), this.root);
   }
-  
+
   public void insert(Node newNode, Node current) {
     if (current == null) // for empty tree
       this.root = newNode;
     else{
-    if (newNode.data < current.data) {// left
-      if (current.left == null) {
+      if (newNode.data < current.data) {// left
+        if (current.left == null) {
         // add node base case
-        current.left = newNode;
-        newNode.parent = current;
-      }// recursive call to left subtree
-      else insert(newNode, current.left);
-    }
-    else if (newNode.data > current.data){// right
-      if (current.right == null) {
+          current.left = newNode;
+          newNode.parent = current;
+        }// recursive call to left subtree
+        else insert(newNode, current.left);
+      }
+      else if (newNode.data > current.data){// right
+        if (current.right == null) {
         // add node base case
         current.right = newNode;
         newNode.parent = current;
-      }// recursive call to left subtree
-      else insert(newNode, current.right);
+        }// recursive call to left subtree
+        else insert(newNode, current.right);
+      }
     else 
       // increment base case
       current.counter++;
@@ -91,5 +92,16 @@
     System.out.print("printTree: " + this.root);
   }
   
-
+  public String toString() {
+    // recursively concatenate to string
+    /*
+     * check if left exists
+ yes -> recursive call
+ no -> concatenate current to string & return
+print current
+check if right exists
+ yes -> recursive call
+ no -> concatenate current to string & return*/
+  }
+  
 } // class myList
