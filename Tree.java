@@ -88,20 +88,26 @@
   }*/
   
   // traverses and prints
-  public void print() {
+  /*public void print() {
     System.out.print("printTree: " + this.root);
+  }*/
+  public void print() {
+    this.print(this.root);
   }
   
-  public String toString() {
-    // recursively concatenate to string
-    /*
-     * check if left exists
- yes -> recursive call
- no -> concatenate current to string & return
-print current
-check if right exists
- yes -> recursive call
- no -> concatenate current to string & return*/
+  public void print(Node current) {
+    // recursively print
+    //print left subtree
+    if (current.left != null) {
+      this.print(current.left);
+    }
+    // print current node
+    current.print();
+    // print right subtree
+    if (current.right != null){
+      this.print(current.right);
+    } 
+    
   }
   
 } // class myList

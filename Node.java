@@ -50,7 +50,7 @@ public class Node
   }
   
   public void print() {
-    System.out.println("Data: " + this.data);
+    System.out.println("Data: " + this.data + "Count: " + this.counter);
   }
   
   
